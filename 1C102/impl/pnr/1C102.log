@@ -1,0 +1,32 @@
+Reading netlist file: "C:\Users\Legion\Desktop\01_sopc\1C102\impl\gwsynthesis\1C102.vg"
+Parsing netlist file "C:\Users\Legion\Desktop\01_sopc\1C102\impl\gwsynthesis\1C102.vg" completed
+Processing netlist completed
+Parsing netlist file "C:\Users\Legion\Desktop\01_sopc\1C102\impl\gao\gao.v" completed
+Processing netlist completed
+Reading constraint file: "C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\constraints\102.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'CLK50M_d' by the specified constraint. And then it may lead to the excessive delay or skew
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'LJTAG_TCK_1' by the specified constraint. And then it may lead to the excessive delay or skew
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'CLK50M_d' by the specified constraint. And then it may lead to the excessive delay or skew
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'LJTAG_TCK_1' by the specified constraint. And then it may lead to the excessive delay or skew
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Generate file "C:\Users\Legion\Desktop\01_sopc\1C102\impl\pnr\1C102.pin.html" completed
+Generate file "C:\Users\Legion\Desktop\01_sopc\1C102\impl\pnr\1C102.rpt.html" completed
+Generate file "C:\Users\Legion\Desktop\01_sopc\1C102\impl\pnr\1C102.rpt.txt" completed
+Generate file "C:\Users\Legion\Desktop\01_sopc\1C102\impl\pnr\1C102.tr.html" completed
+Wed Apr 10 16:32:34 2024
+

@@ -1,0 +1,41 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW5AST-138B" pn="GW5AST-LV138FPG676AES">gw5ast138b-002</Device>
+    <FileList>
+        <File path="src/hw/amba/apb_mux9.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/amba/axi2apb.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/amba/axi_mux.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/apb_gpio.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/config.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/confreg/confreg.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/godson_mcu_cpu.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/godson_mcu_top.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/godson_rcg_module.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/hpet/hpet.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/i2c/i2c_master_bit_ctrl.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/i2c/i2c_master_byte_ctrl.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/i2c/i2c_slave_bit_ctrl.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/i2c/i2c_slave_byte_ctrl.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/i2c/i2c_top.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/io_tools.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/ip_repo/blk_mem_gen_0/blk_mem_gen_0.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/ip_repo/blk_mem_gen_1/blk_mem_gen_1.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/ip_repo/gowin_pll/gowin_pll.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/la132_top_pack/la132_top_gowin.vp" type="file.verilog" enable="1"/>
+        <File path="src/hw/pwm/pwm.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/spi/simple_spi_top.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/spi/spi_fifo4.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/spi/spi_top.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/uart/baudgen.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/uart/uart_rfifo.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/uart/uart_rx.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/uart/uart_tfifo.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/uart/uart_top.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/uart/uart_tx.v" type="file.verilog" enable="1"/>
+        <File path="src/hw/constraints/102.cst" type="file.cst" enable="1"/>
+        <File path="src/hw/1C102.gao" type="file.gao" enable="1"/>
+    </FileList>
+</Project>

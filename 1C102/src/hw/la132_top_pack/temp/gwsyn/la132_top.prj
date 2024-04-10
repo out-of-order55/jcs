@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="PBGA484A" speed="1" partNumber="GW5AST-LV138PG484AES"/>
+    <FileList>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_top.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_tools.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_fetch_stage.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_de_stage.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_jtag_ihb.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_lisa_inst_decode.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_serial_smart_mdu.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_mem_stage.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_lisa_cpucfg.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_wb_stage.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_axi_interface.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_axi_sysbus.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_nocache.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_jtag_module.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_project/debug_FPGA/1C102_encryption/1C102/src/LA132/la132_jtag_dcr.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="la132_top.vg"/>
+        <Option type="output_wrapper_file" value="la132_top_wrapper.v"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="top_module" value="la132_top"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

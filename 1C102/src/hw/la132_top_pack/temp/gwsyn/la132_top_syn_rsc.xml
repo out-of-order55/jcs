@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="la132_top" Register="5">
+    <SubModule name="la132_rst_gen" Register="1" Lut="1"/>
+    <SubModule name="la132_fetch" Register="136" Lut="695"/>
+    <SubModule name="la132_de" Register="71" Alu="152" Lut="3703">
+        <SubModule name="la132_general_regfiles" Register="992" Lut="551"/>
+        <SubModule name="gen_has_ihb.la132_ljtag_ihb" Register="160" Alu="16" Lut="602"/>
+    </SubModule>
+    <SubModule name="gen_smart_mdu.la132_mdu">
+        <SubModule name="inst_mdu_pipe_ctl" Register="3" Lut="4"/>
+        <SubModule name="inst_mdu_de_dp" Alu="32" Lut="82"/>
+        <SubModule name="inst_mdu_mem_dp" Register="109" Alu="39" Lut="1241"/>
+    </SubModule>
+    <SubModule name="la132_mem" Register="831" Alu="97" Lut="2228">
+        <SubModule name="mem_addr" Lut="23"/>
+        <SubModule name="u_csr_mpu0" Register="46" Lut="5"/>
+        <SubModule name="u_csr_mpu1" Register="46" Lut="9"/>
+    </SubModule>
+    <SubModule name="la132_wb" Register="80" Lut="216"/>
+    <SubModule name="la132_axi_ifc" Register="17" Lut="431">
+        <SubModule name="fetch_vaddr_sel" Lut="746"/>
+        <SubModule name="mald_addr_sel" Lut="331"/>
+        <SubModule name="memld_st_vaddr_sel" Alu="254" Lut="262"/>
+        <SubModule name="la132_axi_sysbus" Register="77" Alu="54" Lut="223">
+            <SubModule name="gen_no_dcc.la132_dcache" Register="81" Lut="27"/>
+            <SubModule name="gen_no_icc.la132_icache" Register="26" Lut="147"/>
+            <SubModule name="dcc_vaddr_to_paddr" Lut="22"/>
+            <SubModule name="u_vaddr_attribute" Alu="78" Lut="94"/>
+        </SubModule>
+    </SubModule>
+    <SubModule name="la132_ljtag_module" Register="125" Lut="65">
+        <SubModule name="tap" Register="1" Lut="12">
+            <SubModule name="fsm" Register="12" Lut="18"/>
+            <SubModule name="instreg" Register="10" Lut="9"/>
+            <SubModule name="decode" Register="4" Lut="6"/>
+            <SubModule name="reggroup" Register="122" Lut="84">
+                <SubModule name="ID" Register="32" Lut="35"/>
+                <SubModule name="IMP" Register="32" Lut="35"/>
+                <SubModule name="ADDR" Register="32" Lut="37"/>
+                <SubModule name="DATA" Register="32" Lut="36"/>
+                <SubModule name="ECR1" Register="13" Lut="15"/>
+                <SubModule name="ECR3" Register="3" Lut="3"/>
+                <SubModule name="ECR4" Register="5" Lut="5"/>
+                <SubModule name="ECR5" Register="4" Lut="4"/>
+                <SubModule name="PCSAMPLE" Register="41" Lut="42"/>
+            </SubModule>
+        </SubModule>
+    </SubModule>
+    <SubModule name="la132_ljtag_dcr" Register="1"/>
+    <SubModule name="la132_ljtag_rstgen" Register="2" Lut="1"/>
+</Module>

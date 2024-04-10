@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="godson_mcu_top" Register="30" Lut="55">
+    <SubModule name="pll_CLK50M_to_8M"/>
+    <SubModule name="A_cpu" Register="3112" Alu="644" Lut="11812">
+        <SubModule name="A_flash" Lut="1">
+            <SubModule name="flash_128k_inst" Register="5" Lut="1056" Bsram="64"/>
+        </SubModule>
+        <SubModule name="A_dram">
+            <SubModule name="ram_8k_inst" Register="1" Lut="32" Bsram="4"/>
+        </SubModule>
+        <SubModule name="A_cpu_mux" Register="2" Lut="99">
+            <SubModule name="wr_fifo" Register="8" Lut="12" Ssram="1"/>
+            <SubModule name="rd_fifo" Register="8" Lut="14" Ssram="1"/>
+        </SubModule>
+        <SubModule name="A_axi2apb" Register="99" Lut="128"/>
+        <SubModule name="A_apb_mux_cpu" Lut="66"/>
+    </SubModule>
+    <SubModule name="A_pwm" Register="160" Alu="31" Lut="217"/>
+    <SubModule name="A_timer" Register="40" Lut="68"/>
+    <SubModule name="A_uart1">
+        <SubModule name="uBAUDGEN" Register="22" Lut="29"/>
+        <SubModule name="uUART_TX" Register="10" Lut="23"/>
+    </SubModule>
+    <SubModule name="i2c_top" Register="16" Lut="3"/>
+    <SubModule name="spi_top" Register="41" Lut="37">
+        <SubModule name="rfifo" Register="3" Lut="4"/>
+        <SubModule name="wfifo" Register="2" Lut="3"/>
+    </SubModule>
+</Module>

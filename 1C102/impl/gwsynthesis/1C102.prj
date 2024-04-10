@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AES"/>
+    <FileList>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\amba\apb_mux9.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\amba\axi2apb.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\amba\axi_mux.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\apb_gpio.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\config.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\confreg\confreg.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\godson_mcu_cpu.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\godson_mcu_top.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\godson_rcg_module.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\hpet\hpet.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\i2c\i2c_master_bit_ctrl.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\i2c\i2c_master_byte_ctrl.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\i2c\i2c_slave_bit_ctrl.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\i2c\i2c_slave_byte_ctrl.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\i2c\i2c_top.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\io_tools.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\ip_repo\blk_mem_gen_0\blk_mem_gen_0.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\ip_repo\blk_mem_gen_1\blk_mem_gen_1.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\ip_repo\gowin_pll\gowin_pll.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\la132_top_pack\la132_top_gowin.vp" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\pwm\pwm.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\spi\simple_spi_top.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\spi\spi_fifo4.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\spi\spi_top.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\uart\baudgen.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\uart\uart_rfifo.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\uart\uart_rx.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\uart\uart_tfifo.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\uart\uart_top.v" type="verilog"/>
+        <File path="C:\Users\Legion\Desktop\01_sopc\1C102\src\hw\uart\uart_tx.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="C:\Users\Legion\Desktop\01_sopc\1C102\impl\gwsynthesis\1C102.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="top_module" value="godson_mcu_top"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

@@ -1,0 +1,802 @@
+[
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+  "InstLine" : 1,
+  "InstName" : "godson_mcu_top",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "godson_mcu_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 60,
+    "InstName" : "pll_CLK50M_to_8M",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/ip_repo/gowin_pll/gowin_pll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 146,
+    "InstName" : "A_cpu",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "godson_mcu_cpu",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 271,
+      "InstName" : "A_la132",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/la132_top_pack/la132_top_gowin.vp",
+      "ModuleLine" : 1,
+      "ModuleName" : "la132_top"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 242,
+      "InstName" : "A_flash",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "ModuleLine" : 697,
+      "ModuleName" : "Flash_128k",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+        "InstLine" : 725,
+        "InstName" : "flash_128k_inst",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/ip_repo/blk_mem_gen_0/blk_mem_gen_0.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "blk_mem_gen_0"
+       }
+      ]
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 254,
+      "InstName" : "A_dram",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "ModuleLine" : 655,
+      "ModuleName" : "Dram_8k",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+        "InstLine" : 683,
+        "InstName" : "ram_8k_inst",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/ip_repo/blk_mem_gen_1/blk_mem_gen_1.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "blk_mem_gen_1"
+       }
+      ]
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 390,
+      "InstName" : "A_cpu_mux",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/axi_mux.v",
+      "ModuleLine" : 23,
+      "ModuleName" : "axi_slave_mux_cpu",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/axi_mux.v",
+        "InstLine" : 1772,
+        "InstName" : "wr_fifo",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/axi_mux.v",
+        "ModuleLine" : 1981,
+        "ModuleName" : "nb_sync_fifo_mux"
+       },
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/axi_mux.v",
+        "InstLine" : 1941,
+        "InstName" : "rd_fifo",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/axi_mux.v",
+        "ModuleLine" : 1981,
+        "ModuleName" : "nb_sync_fifo_mux"
+       }
+      ]
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 507,
+      "InstName" : "A_axi2apb",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/axi2apb.v",
+      "ModuleLine" : 12,
+      "ModuleName" : "axi2apb_bridge"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 560,
+      "InstName" : "A_apb_mux_cpu",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/apb_mux9.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "apb_mux9"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 235,
+    "InstName" : "A_gpio",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/apb_gpio.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "apb_gpio",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/apb_gpio.v",
+      "InstLine" : 87,
+      "InstName" : "pad_GPIO01",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "GPIO_IOBUF"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 251,
+    "InstName" : "A_pwm",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/pwm/pwm.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "apb_pwm"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 267,
+    "InstName" : "A_timer",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/hpet/hpet.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "HPET_TOP"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 282,
+    "InstName" : "confreg",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "CONFREG",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 74,
+      "InstName" : "int0",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 76,
+      "InstName" : "int1",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 78,
+      "InstName" : "int2",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 80,
+      "InstName" : "int3",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 82,
+      "InstName" : "int4",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 84,
+      "InstName" : "int5",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 86,
+      "InstName" : "int6",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 88,
+      "InstName" : "int7",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 304,
+    "InstName" : "A_uart1",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_top.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "UART_TOP",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_top.v",
+      "InstLine" : 98,
+      "InstName" : "uBAUDGEN",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/baudgen.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "BAUDGEN"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_top.v",
+      "InstLine" : 108,
+      "InstName" : "uFIFO_TX",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_tfifo.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "UART_TFIFO"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_top.v",
+      "InstLine" : 122,
+      "InstName" : "uFIFO_RX",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_rfifo.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "UART_RFIFO"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_top.v",
+      "InstLine" : 134,
+      "InstName" : "uUART_RX",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_rx.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "UART_RX"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_top.v",
+      "InstLine" : 145,
+      "InstName" : "uUART_TX",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_tx.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "UART_TX"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 321,
+    "InstName" : "i2c_top",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_top.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "I2C_TOP",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_top.v",
+      "InstLine" : 26,
+      "InstName" : "pad_I2C_SCL",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
+      "ModuleLine" : 14,
+      "ModuleName" : "I2C_IOBUF"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_top.v",
+      "InstLine" : 27,
+      "InstName" : "pad_I2C_SDA",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
+      "ModuleLine" : 14,
+      "ModuleName" : "I2C_IOBUF"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_top.v",
+      "InstLine" : 163,
+      "InstName" : "master_byte_controller",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_master_byte_ctrl.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "i2c_master_byte_ctrl",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_master_byte_ctrl.v",
+        "InstLine" : 92,
+        "InstName" : "bit_controller",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_master_bit_ctrl.v",
+        "ModuleLine" : 45,
+        "ModuleName" : "i2c_master_bit_ctrl"
+       }
+      ]
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_top.v",
+      "InstLine" : 244,
+      "InstName" : "i_sda_i_sync",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_top.v",
+      "ModuleLine" : 274,
+      "ModuleName" : "i2c_sync_module"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_top.v",
+      "InstLine" : 245,
+      "InstName" : "i_scl_i_sync",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_top.v",
+      "ModuleLine" : 274,
+      "ModuleName" : "i2c_sync_module"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 338,
+    "InstName" : "spi_top",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_top.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "SPI_TOP",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_top.v",
+      "InstLine" : 180,
+      "InstName" : "rfifo",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_fifo4.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "spi_fifo4"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_top.v",
+      "InstLine" : 191,
+      "InstName" : "wfifo",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_fifo4.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "spi_fifo4"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "InstLine" : 6,
+  "InstName" : "godson_rcg_module",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 6,
+  "ModuleName" : "godson_rcg_module",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 33,
+    "InstName" : "A_dotest_sync",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 168,
+    "ModuleName" : "dotest_sync"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 37,
+    "InstName" : "A_rst_filter",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 150,
+    "ModuleName" : "reset_sync"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 43,
+    "InstName" : "A_wdt_mux",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 55,
+    "InstName" : "A_srst_int32k",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 119,
+    "ModuleName" : "areset_sync"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 57,
+    "InstName" : "CLK8M_to_32k_int",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 726,
+    "ModuleName" : "clk8m_32k"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 62,
+    "InstName" : "A_scan_32k_cg",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 64,
+    "InstName" : "A_osc32k_mux",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 66,
+    "InstName" : "A_cksel32k",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 323,
+    "ModuleName" : "clock_select_32k"
+   }
+  ]
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "InstLine" : 185,
+  "InstName" : "cpu_rcg",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 185,
+  "ModuleName" : "cpu_rcg",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 221,
+    "InstName" : "A_srst_int32m",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 119,
+    "ModuleName" : "areset_sync"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 224,
+    "InstName" : "A_scan_clk_cg",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 225,
+    "InstName" : "A_osc32m_mux",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 226,
+    "InstName" : "A_int32m_buf",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 589,
+    "ModuleName" : "TECH_CNBUF"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 255,
+    "InstName" : "A_int8_m",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 256,
+    "InstName" : "A_pclk_cg",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 257,
+    "InstName" : "A_pclk_or",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 619,
+    "ModuleName" : "TECH_CNOR2"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 263,
+    "InstName" : "A_cksel",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 341,
+    "ModuleName" : "clock_select_328",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+      "InstLine" : 397,
+      "InstName" : "i_lockup_sts1",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+      "ModuleLine" : 690,
+      "ModuleName" : "TECH_LATCH"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+      "InstLine" : 398,
+      "InstName" : "i_lockup_sts0",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+      "ModuleLine" : 690,
+      "ModuleName" : "TECH_LATCH"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+      "InstLine" : 399,
+      "InstName" : "i_lockup_cksel",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+      "ModuleLine" : 690,
+      "ModuleName" : "TECH_LATCH"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+      "InstLine" : 402,
+      "InstName" : "I_gfm",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+      "ModuleLine" : 462,
+      "ModuleName" : "gfmux",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "InstLine" : 481,
+        "InstName" : "rst_a",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 119,
+        "ModuleName" : "areset_sync"
+       },
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "InstLine" : 482,
+        "InstName" : "rst_b",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 119,
+        "ModuleName" : "areset_sync"
+       },
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "InstLine" : 500,
+        "InstName" : "i_selb_sync",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 89,
+        "ModuleName" : "sync_module"
+       },
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "InstLine" : 528,
+        "InstName" : "cg_a",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 550,
+        "ModuleName" : "TECH_ICG"
+       },
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "InstLine" : 529,
+        "InstName" : "cg_b",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 550,
+        "ModuleName" : "TECH_ICG"
+       },
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "InstLine" : 532,
+        "InstName" : "band",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 599,
+        "ModuleName" : "TECH_CNAND2"
+       },
+       {
+        "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "InstLine" : 537,
+        "InstName" : "omux",
+        "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+        "ModuleLine" : 628,
+        "ModuleName" : "TECH_CNMUX2"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 274,
+    "InstName" : "A_clk328_buf",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 589,
+    "ModuleName" : "TECH_CNBUF"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 277,
+    "InstName" : "i_lockup_rdy_r",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 690,
+    "ModuleName" : "TECH_LATCH"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 289,
+    "InstName" : "A_cpu_clk_chop",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 290,
+    "InstName" : "A_bus_clk_chop",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 293,
+    "InstName" : "A_bcnt_m",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 294,
+    "InstName" : "A_bus_clk_or",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 619,
+    "ModuleName" : "TECH_CNOR2"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 296,
+    "InstName" : "A_srst_buscpu",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 119,
+    "ModuleName" : "areset_sync"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 299,
+    "InstName" : "i_lockup_syncen",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 690,
+    "ModuleName" : "TECH_LATCH"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 313,
+    "InstName" : "A_vclk_mux",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 628,
+    "ModuleName" : "TECH_CNMUX2"
+   }
+  ]
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "InstLine" : 543,
+  "InstName" : "cg_module",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 543,
+  "ModuleName" : "cg_module",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 546,
+    "InstName" : "cg",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   }
+  ]
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "InstLine" : 649,
+  "InstName" : "TECH_CNDFFR",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 649,
+  "ModuleName" : "TECH_CNDFFR"
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "InstLine" : 661,
+  "InstName" : "TECH_CNXOR2",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 661,
+  "ModuleName" : "TECH_CNXOR2"
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "InstLine" : 706,
+  "InstName" : "FUNC_CG_CELL",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 706,
+  "ModuleName" : "FUNC_CG_CELL",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "InstLine" : 712,
+    "InstName" : "cg",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+    "ModuleLine" : 550,
+    "ModuleName" : "TECH_ICG"
+   }
+  ]
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "InstLine" : 715,
+  "InstName" : "TECH_BUF",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+  "ModuleLine" : 715,
+  "ModuleName" : "TECH_BUF"
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_slave_byte_ctrl.v",
+  "InstLine" : 6,
+  "InstName" : "i2c_slave_byte_ctrl",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_slave_byte_ctrl.v",
+  "ModuleLine" : 6,
+  "ModuleName" : "i2c_slave_byte_ctrl",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_slave_byte_ctrl.v",
+    "InstLine" : 79,
+    "InstName" : "bit_controller",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_slave_bit_ctrl.v",
+    "ModuleLine" : 44,
+    "ModuleName" : "i2c_slave_bit_ctrl"
+   }
+  ]
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
+  "InstLine" : 27,
+  "InstName" : "SPI_IOBUF",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
+  "ModuleLine" : 27,
+  "ModuleName" : "SPI_IOBUF"
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/la132_top_pack/la132_top_gowin.vp",
+  "InstLine" : 7,
+  "InstName" : "la132_top_gowin_top",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/la132_top_pack/la132_top_gowin.vp",
+  "ModuleLine" : 7,
+  "ModuleName" : "la132_top_gowin_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/la132_top_pack/la132_top_gowin.vp",
+    "InstLine" : 247,
+    "InstName" : "la132_top_ins",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/la132_top_pack/la132_top_gowin.vp",
+    "ModuleLine" : 1,
+    "ModuleName" : "la132_top"
+   }
+  ]
+ },
+ {
+  "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/simple_spi_top.v",
+  "InstLine" : 3,
+  "InstName" : "simple_spi_top",
+  "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/simple_spi_top.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "simple_spi_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/simple_spi_top.v",
+    "InstLine" : 170,
+    "InstName" : "rfifo",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_fifo4.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "spi_fifo4"
+   },
+   {
+    "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/simple_spi_top.v",
+    "InstLine" : 181,
+    "InstName" : "wfifo",
+    "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_fifo4.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "spi_fifo4"
+   }
+  ]
+ }
+]

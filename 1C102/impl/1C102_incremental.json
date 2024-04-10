@@ -1,0 +1,402 @@
+[
+ {
+  "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_top.v",
+  "InstLine" : 1,
+  "InstName" : "godson_mcu_top",
+  "Mode" : 1,
+  "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "godson_mcu_top",
+  "Process" : 0,
+  "SetMode" : false,
+  "SetProcess" : false,
+  "SubNodes" : [
+   {
+    "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 48,
+    "InstName" : "pll_CLK50M_to_8M",
+    "Mode" : 1,
+    "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/ip_repo/gowin_pll/gowin_pll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false
+   },
+   {
+    "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 119,
+    "InstName" : "A_cpu",
+    "Mode" : 1,
+    "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "godson_mcu_cpu",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false,
+    "SubNodes" : [
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 204,
+      "InstName" : "A_la132",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/la132_top_pack/la132_top_gowin.vp",
+      "ModuleLine" : 391,
+      "ModuleName" : "la132_top",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 175,
+      "InstName" : "A_flash",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "ModuleLine" : 559,
+      "ModuleName" : "Flash_128k",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false,
+      "SubNodes" : [
+       {
+        "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+        "InstLine" : 587,
+        "InstName" : "flash_128k_inst",
+        "Mode" : 1,
+        "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/ip_repo/blk_mem_gen_0/blk_mem_gen_0.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "blk_mem_gen_0",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 187,
+      "InstName" : "A_dram",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "ModuleLine" : 517,
+      "ModuleName" : "Dram_8k",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false,
+      "SubNodes" : [
+       {
+        "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+        "InstLine" : 545,
+        "InstName" : "ram_8k_inst",
+        "Mode" : 1,
+        "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/ip_repo/blk_mem_gen_1/blk_mem_gen_1.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "blk_mem_gen_1",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 323,
+      "InstName" : "A_cpu_mux",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/amba/axi_mux.v",
+      "ModuleLine" : 23,
+      "ModuleName" : "axi_slave_mux_cpu",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false,
+      "SubNodes" : [
+       {
+        "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/amba/axi_mux.v",
+        "InstLine" : 1772,
+        "InstName" : "wr_fifo",
+        "Mode" : 1,
+        "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/amba/axi_mux.v",
+        "ModuleLine" : 1981,
+        "ModuleName" : "nb_sync_fifo_mux",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       },
+       {
+        "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/amba/axi_mux.v",
+        "InstLine" : 1941,
+        "InstName" : "rd_fifo",
+        "Mode" : 1,
+        "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/amba/axi_mux.v",
+        "ModuleLine" : 1981,
+        "ModuleName" : "nb_sync_fifo_mux",
+        "Process" : 0,
+        "SetMode" : false,
+        "SetProcess" : false
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 440,
+      "InstName" : "A_axi2apb",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/amba/axi2apb.v",
+      "ModuleLine" : 12,
+      "ModuleName" : "axi2apb_bridge",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+      "InstLine" : 493,
+      "InstName" : "A_apb_mux_cpu",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/amba/apb_mux9.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "apb_mux9",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     }
+    ]
+   },
+   {
+    "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 145,
+    "InstName" : "A_gpio",
+    "Mode" : 1,
+    "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/apb_gpio.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "apb_gpio",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false,
+    "SubNodes" : [
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/apb_gpio.v",
+      "InstLine" : 87,
+      "InstName" : "pad_GPIO01",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/io_tools.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "GPIO_IOBUF",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     }
+    ]
+   },
+   {
+    "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 161,
+    "InstName" : "A_pwm",
+    "Mode" : 1,
+    "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/pwm/pwm.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "apb_pwm",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false
+   },
+   {
+    "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 177,
+    "InstName" : "A_timer",
+    "Mode" : 1,
+    "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/hpet/hpet.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "HPET_TOP",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false
+   },
+   {
+    "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 192,
+    "InstName" : "confreg",
+    "Mode" : 1,
+    "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "CONFREG",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false,
+    "SubNodes" : [
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 74,
+      "InstName" : "int0",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 76,
+      "InstName" : "int1",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 78,
+      "InstName" : "int2",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 80,
+      "InstName" : "int3",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 82,
+      "InstName" : "int4",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 84,
+      "InstName" : "int5",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 86,
+      "InstName" : "int6",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "InstLine" : 88,
+      "InstName" : "int7",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/confreg/confreg.v",
+      "ModuleLine" : 97,
+      "ModuleName" : "one_int_gen",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     }
+    ]
+   },
+   {
+    "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/godson_mcu_top.v",
+    "InstLine" : 214,
+    "InstName" : "A_uart1",
+    "Mode" : 1,
+    "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/uart_top.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "UART_TOP",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false,
+    "SubNodes" : [
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/uart_top.v",
+      "InstLine" : 98,
+      "InstName" : "uBAUDGEN",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/baudgen.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "BAUDGEN",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/uart_top.v",
+      "InstLine" : 108,
+      "InstName" : "uFIFO_TX",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/uart_tfifo.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "UART_TFIFO",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/uart_top.v",
+      "InstLine" : 122,
+      "InstName" : "uFIFO_RX",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/uart_rfifo.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "UART_RFIFO",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/uart_top.v",
+      "InstLine" : 134,
+      "InstName" : "uUART_RX",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/uart_rx.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "UART_RX",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/uart_top.v",
+      "InstLine" : 145,
+      "InstName" : "uUART_TX",
+      "Mode" : 1,
+      "ModuleFile" : "D:/competition/IC/Projest/01_sopc/1C102/src/hw/uart/uart_tx.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "UART_TX",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Hierarchy Module Resource</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 14px; }
+div#main_wrapper{ width: 100%; }
+h1 {text-align: center; }
+h1 {margin-top: 36px; }
+table, th, td { border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { align = "center"; padding: 5px 2px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-color: #dee8f4; }
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="content">
+<h1>Hierarchy Module Resource</h1>
+<table>
+<tr>
+<th class="label">MODULE NAME</th>
+<th class="label">REG NUMBER</th>
+<th class="label">ALU NUMBER</th>
+<th class="label">LUT NUMBER</th>
+<th class="label">DSP NUMBER</th>
+<th class="label">BSRAM NUMBER</th>
+<th class="label">SSRAM NUMBER</th>
+</tr>
+<tr>
+<td class="label">godson_mcu_top (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v)</td>
+<td align = "center">30</td>
+<td align = "center">-</td>
+<td align = "center">55</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--pll_CLK50M_to_8M
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--A_cpu
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v)</td>
+<td align = "center">3112</td>
+<td align = "center">644</td>
+<td align = "center">11812</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--A_flash
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--flash_128k_inst
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">5</td>
+<td align = "center">-</td>
+<td align = "center">1056</td>
+<td align = "center">-</td>
+<td align = "center">64</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--A_dram
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--ram_8k_inst
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--A_cpu_mux
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">99</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--wr_fifo
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/axi_mux.v)</td>
+<td align = "center">8</td>
+<td align = "center">-</td>
+<td align = "center">12</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--rd_fifo
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/axi_mux.v)</td>
+<td align = "center">8</td>
+<td align = "center">-</td>
+<td align = "center">14</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--A_axi2apb
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">99</td>
+<td align = "center">-</td>
+<td align = "center">128</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--A_apb_mux_cpu
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">66</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--A_pwm
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v)</td>
+<td align = "center">160</td>
+<td align = "center">31</td>
+<td align = "center">217</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--A_timer
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v)</td>
+<td align = "center">40</td>
+<td align = "center">-</td>
+<td align = "center">68</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--A_uart1
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--uBAUDGEN
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_top.v)</td>
+<td align = "center">22</td>
+<td align = "center">-</td>
+<td align = "center">29</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--uUART_TX
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_top.v)</td>
+<td align = "center">10</td>
+<td align = "center">-</td>
+<td align = "center">23</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--i2c_top
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v)</td>
+<td align = "center">16</td>
+<td align = "center">-</td>
+<td align = "center">3</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--spi_top
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v)</td>
+<td align = "center">41</td>
+<td align = "center">-</td>
+<td align = "center">37</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--rfifo
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_top.v)</td>
+<td align = "center">3</td>
+<td align = "center">-</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--wfifo
+ (C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_top.v)</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">3</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+</table>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

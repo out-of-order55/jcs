@@ -1,0 +1,231 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Standard</Mode>
+    <AoCore index="0" sample_clock="clk_ext8m" trig_type="0" storage_depth="2048" window_num="1" capture_amount="2048" implementation="0" trigger_pos="22" module_name="godson_mcu_top" force_trigger_by_falling_edge="false">
+        <SignalList>
+            <Signal capture_enable="true">A_cpu/A_la132/reset_Z</Signal>
+            <Signal capture_enable="true">A_cpu/A_flash/flash_128k_inst/inst_sram_en</Signal>
+            <Signal capture_enable="true">A_cpu/A_flash/flash_128k_inst/inst_sram_wr</Signal>
+            <Bus capture_enable="true" name="A_cpu/A_flash/flash_128k_inst/inst_sram_addr[16:2]">
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[16]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[15]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[14]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[13]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[12]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[11]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[10]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[9]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[8]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[7]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[6]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[5]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[4]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[3]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_addr[2]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[0:31]">
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[31]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[30]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[29]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[28]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[27]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[26]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[25]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[24]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[23]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[22]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[21]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[20]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[19]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[18]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[17]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[16]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[15]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[14]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[13]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[12]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[11]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[10]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[9]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[8]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[7]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[6]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[5]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[4]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[3]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[2]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[1]</Signal>
+                <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_rdata[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">A_cpu/data_sram_en</Signal>
+            <Signal capture_enable="true">A_cpu/data_sram_wr</Signal>
+            <Bus capture_enable="true" name="A_cpu/data_sram_addr[12:2]">
+                <Signal>A_cpu/data_sram_addr[12]</Signal>
+                <Signal>A_cpu/data_sram_addr[11]</Signal>
+                <Signal>A_cpu/data_sram_addr[10]</Signal>
+                <Signal>A_cpu/data_sram_addr[9]</Signal>
+                <Signal>A_cpu/data_sram_addr[8]</Signal>
+                <Signal>A_cpu/data_sram_addr[7]</Signal>
+                <Signal>A_cpu/data_sram_addr[6]</Signal>
+                <Signal>A_cpu/data_sram_addr[5]</Signal>
+                <Signal>A_cpu/data_sram_addr[4]</Signal>
+                <Signal>A_cpu/data_sram_addr[3]</Signal>
+                <Signal>A_cpu/data_sram_addr[2]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="A_cpu/data_sram_rdata[31:0]">
+                <Signal>A_cpu/data_sram_rdata[31]</Signal>
+                <Signal>A_cpu/data_sram_rdata[30]</Signal>
+                <Signal>A_cpu/data_sram_rdata[29]</Signal>
+                <Signal>A_cpu/data_sram_rdata[28]</Signal>
+                <Signal>A_cpu/data_sram_rdata[27]</Signal>
+                <Signal>A_cpu/data_sram_rdata[26]</Signal>
+                <Signal>A_cpu/data_sram_rdata[25]</Signal>
+                <Signal>A_cpu/data_sram_rdata[24]</Signal>
+                <Signal>A_cpu/data_sram_rdata[23]</Signal>
+                <Signal>A_cpu/data_sram_rdata[22]</Signal>
+                <Signal>A_cpu/data_sram_rdata[21]</Signal>
+                <Signal>A_cpu/data_sram_rdata[20]</Signal>
+                <Signal>A_cpu/data_sram_rdata[19]</Signal>
+                <Signal>A_cpu/data_sram_rdata[18]</Signal>
+                <Signal>A_cpu/data_sram_rdata[17]</Signal>
+                <Signal>A_cpu/data_sram_rdata[16]</Signal>
+                <Signal>A_cpu/data_sram_rdata[15]</Signal>
+                <Signal>A_cpu/data_sram_rdata[14]</Signal>
+                <Signal>A_cpu/data_sram_rdata[13]</Signal>
+                <Signal>A_cpu/data_sram_rdata[12]</Signal>
+                <Signal>A_cpu/data_sram_rdata[11]</Signal>
+                <Signal>A_cpu/data_sram_rdata[10]</Signal>
+                <Signal>A_cpu/data_sram_rdata[9]</Signal>
+                <Signal>A_cpu/data_sram_rdata[8]</Signal>
+                <Signal>A_cpu/data_sram_rdata[7]</Signal>
+                <Signal>A_cpu/data_sram_rdata[6]</Signal>
+                <Signal>A_cpu/data_sram_rdata[5]</Signal>
+                <Signal>A_cpu/data_sram_rdata[4]</Signal>
+                <Signal>A_cpu/data_sram_rdata[3]</Signal>
+                <Signal>A_cpu/data_sram_rdata[2]</Signal>
+                <Signal>A_cpu/data_sram_rdata[1]</Signal>
+                <Signal>A_cpu/data_sram_rdata[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="A_cpu/data_sram_wdata[31:0]">
+                <Signal>A_cpu/data_sram_wdata[31]</Signal>
+                <Signal>A_cpu/data_sram_wdata[30]</Signal>
+                <Signal>A_cpu/data_sram_wdata[29]</Signal>
+                <Signal>A_cpu/data_sram_wdata[28]</Signal>
+                <Signal>A_cpu/data_sram_wdata[27]</Signal>
+                <Signal>A_cpu/data_sram_wdata[26]</Signal>
+                <Signal>A_cpu/data_sram_wdata[25]</Signal>
+                <Signal>A_cpu/data_sram_wdata[24]</Signal>
+                <Signal>A_cpu/data_sram_wdata[23]</Signal>
+                <Signal>A_cpu/data_sram_wdata[22]</Signal>
+                <Signal>A_cpu/data_sram_wdata[21]</Signal>
+                <Signal>A_cpu/data_sram_wdata[20]</Signal>
+                <Signal>A_cpu/data_sram_wdata[19]</Signal>
+                <Signal>A_cpu/data_sram_wdata[18]</Signal>
+                <Signal>A_cpu/data_sram_wdata[17]</Signal>
+                <Signal>A_cpu/data_sram_wdata[16]</Signal>
+                <Signal>A_cpu/data_sram_wdata[15]</Signal>
+                <Signal>A_cpu/data_sram_wdata[14]</Signal>
+                <Signal>A_cpu/data_sram_wdata[13]</Signal>
+                <Signal>A_cpu/data_sram_wdata[12]</Signal>
+                <Signal>A_cpu/data_sram_wdata[11]</Signal>
+                <Signal>A_cpu/data_sram_wdata[10]</Signal>
+                <Signal>A_cpu/data_sram_wdata[9]</Signal>
+                <Signal>A_cpu/data_sram_wdata[8]</Signal>
+                <Signal>A_cpu/data_sram_wdata[7]</Signal>
+                <Signal>A_cpu/data_sram_wdata[6]</Signal>
+                <Signal>A_cpu/data_sram_wdata[5]</Signal>
+                <Signal>A_cpu/data_sram_wdata[4]</Signal>
+                <Signal>A_cpu/data_sram_wdata[3]</Signal>
+                <Signal>A_cpu/data_sram_wdata[2]</Signal>
+                <Signal>A_cpu/data_sram_wdata[1]</Signal>
+                <Signal>A_cpu/data_sram_wdata[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="A_cpu/A_la132/ifc2fetch_bus[31:0]">
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[31]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[30]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[29]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[28]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[27]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[26]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[25]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[24]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[23]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[22]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[21]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[20]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[19]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[18]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[17]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[16]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[15]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[14]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[13]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[12]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[11]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[10]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[9]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[8]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[7]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[6]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[5]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[4]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[3]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[2]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[1]</Signal>
+                <Signal>A_cpu/A_la132/ifc2fetch_bus[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="A_cpu/A_axi2apb/state[1:0]">
+                <Signal>A_cpu/A_axi2apb/state[1]</Signal>
+                <Signal>A_cpu/A_axi2apb/state[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">A_cpu/A_axi2apb/valid</Signal>
+            <Signal capture_enable="true">A_cpu/A_axi2apb/busy</Signal>
+        </SignalList>
+        <Triggers>
+            <Trigger index="0">
+                <SignalList>
+                    <Signal>A_cpu/A_flash/flash_128k_inst/inst_sram_en</Signal>
+                    <Signal>pll_lock</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="1"/>
+            <Trigger index="2"/>
+            <Trigger index="3"/>
+            <Trigger index="4"/>
+            <Trigger index="5"/>
+            <Trigger index="6"/>
+            <Trigger index="7"/>
+            <Trigger index="8"/>
+            <Trigger index="9"/>
+            <Trigger index="10"/>
+            <Trigger index="11"/>
+            <Trigger index="12"/>
+            <Trigger index="13"/>
+            <Trigger index="14"/>
+            <Trigger index="15"/>
+        </Triggers>
+        <MatchUnits>
+            <MatchUnit index="0" enabled="1" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="RX" value1="00" trigger="0"/>
+            <MatchUnit index="1" enabled="0" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="X1X" value1="000" trigger="1"/>
+            <MatchUnit index="2" enabled="0" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1" value1="0" trigger="2"/>
+            <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="7" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="9" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="10" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="11" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="12" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="13" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="14" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+        </MatchUnits>
+        <Expressions type="Static">
+            <Expression>M0</Expression>
+        </Expressions>
+    </AoCore>
+    <GAO_ID>0111000100011111</GAO_ID>
+</GAO_CONFIG>

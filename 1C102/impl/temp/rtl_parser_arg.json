@@ -1,0 +1,133 @@
+{
+ "Device" : "GW5AST-138B",
+ "Files" : [
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/apb_mux9.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/axi2apb.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/amba/axi_mux.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/apb_gpio.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/config.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_rcg_module.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/hpet/hpet.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_master_bit_ctrl.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_master_byte_ctrl.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_slave_bit_ctrl.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_slave_byte_ctrl.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/ip_repo/blk_mem_gen_0/blk_mem_gen_0.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/ip_repo/blk_mem_gen_1/blk_mem_gen_1.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/ip_repo/gowin_pll/gowin_pll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/la132_top_pack/la132_top_gowin.vp",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/pwm/pwm.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/simple_spi_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_fifo4.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/baudgen.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_rfifo.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_rx.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_tfifo.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_tx.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/impl/temp/rtl_parser.result",
+ "Top" : "godson_mcu_top",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

@@ -1,0 +1,41 @@
+********* Archive Project on 2023-10-26 14:57:19 *********
+GOWIN Version: V1.9.9Beta-5
+Archive file: F:\Gowin\1C102\1C102.gar
+Archive files successfully
+
+
+********* Archived files *********
+F:\Gowin\1C102\1C102.gprj
+F:\Gowin\1C102\1C102.gprj.user
+F:\Gowin\1C102\src\102.cst
+F:\Gowin\1C102\src\LA132\la132_axi_interface.v
+F:\Gowin\1C102\src\LA132\la132_axi_sysbus.v
+F:\Gowin\1C102\src\LA132\la132_config.h
+F:\Gowin\1C102\src\LA132\la132_de_stage.v
+F:\Gowin\1C102\src\LA132\la132_define.h
+F:\Gowin\1C102\src\LA132\la132_fetch_stage.v
+F:\Gowin\1C102\src\LA132\la132_global.h
+F:\Gowin\1C102\src\LA132\la132_jtag_dcr.v
+F:\Gowin\1C102\src\LA132\la132_jtag_ihb.v
+F:\Gowin\1C102\src\LA132\la132_jtag_module.v
+F:\Gowin\1C102\src\LA132\la132_lisa_cpucfg.v
+F:\Gowin\1C102\src\LA132\la132_lisa_inst_decode.v
+F:\Gowin\1C102\src\LA132\la132_mem_stage.v
+F:\Gowin\1C102\src\LA132\la132_nocache.v
+F:\Gowin\1C102\src\LA132\la132_serial_smart_mdu.v
+F:\Gowin\1C102\src\LA132\la132_sram2axi.v
+F:\Gowin\1C102\src\LA132\la132_tools.v
+F:\Gowin\1C102\src\LA132\la132_top.v
+F:\Gowin\1C102\src\LA132\la132_wb_stage.v
+F:\Gowin\1C102\src\amba\apb_mux9.v
+F:\Gowin\1C102\src\amba\axi2apb.v
+F:\Gowin\1C102\src\amba\axi_mux.v
+F:\Gowin\1C102\src\config.h
+F:\Gowin\1C102\src\constraints\1c102.xdc
+F:\Gowin\1C102\src\godson_mcu_cpu.v
+F:\Gowin\1C102\src\godson_mcu_top.v
+F:\Gowin\1C102\src\godson_rcg_module.v
+F:\Gowin\1C102\src\gpio\gpio.v
+
+********* Total 31 files to archive *********
+
