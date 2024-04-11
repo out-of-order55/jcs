@@ -9,7 +9,7 @@
   "SubInsts" : [
    {
     "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
-    "InstLine" : 60,
+    "InstLine" : 65,
     "InstName" : "pll_CLK50M_to_8M",
     "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/ip_repo/gowin_pll/gowin_pll.v",
     "ModuleLine" : 10,
@@ -17,7 +17,7 @@
    },
    {
     "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
-    "InstLine" : 146,
+    "InstLine" : 157,
     "InstName" : "A_cpu",
     "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_cpu.v",
     "ModuleLine" : 3,
@@ -113,7 +113,7 @@
    },
    {
     "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
-    "InstLine" : 235,
+    "InstLine" : 245,
     "InstName" : "A_gpio",
     "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/apb_gpio.v",
     "ModuleLine" : 1,
@@ -126,12 +126,44 @@
       "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
       "ModuleLine" : 1,
       "ModuleName" : "GPIO_IOBUF"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/apb_gpio.v",
+      "InstLine" : 89,
+      "InstName" : "pad_GPIO13",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "GPIO_IOBUF"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/apb_gpio.v",
+      "InstLine" : 90,
+      "InstName" : "pad_GPIO18",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "GPIO_IOBUF"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/apb_gpio.v",
+      "InstLine" : 91,
+      "InstName" : "pad_GPIO19",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "GPIO_IOBUF"
+     },
+     {
+      "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/apb_gpio.v",
+      "InstLine" : 92,
+      "InstName" : "pad_GPIO20",
+      "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/io_tools.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "GPIO_IOBUF"
      }
     ]
    },
    {
     "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
-    "InstLine" : 251,
+    "InstLine" : 265,
     "InstName" : "A_pwm",
     "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/pwm/pwm.v",
     "ModuleLine" : 3,
@@ -139,7 +171,7 @@
    },
    {
     "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
-    "InstLine" : 267,
+    "InstLine" : 281,
     "InstName" : "A_timer",
     "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/hpet/hpet.v",
     "ModuleLine" : 3,
@@ -147,7 +179,7 @@
    },
    {
     "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
-    "InstLine" : 282,
+    "InstLine" : 305,
     "InstName" : "confreg",
     "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/confreg/confreg.v",
     "ModuleLine" : 3,
@@ -221,7 +253,7 @@
    },
    {
     "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
-    "InstLine" : 304,
+    "InstLine" : 327,
     "InstName" : "A_uart1",
     "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/uart/uart_top.v",
     "ModuleLine" : 1,
@@ -271,7 +303,7 @@
    },
    {
     "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
-    "InstLine" : 321,
+    "InstLine" : 344,
     "InstName" : "i2c_top",
     "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/i2c/i2c_top.v",
     "ModuleLine" : 3,
@@ -331,7 +363,7 @@
    },
    {
     "InstFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/godson_mcu_top.v",
-    "InstLine" : 338,
+    "InstLine" : 361,
     "InstName" : "spi_top",
     "ModuleFile" : "C:/Users/Legion/Desktop/01_sopc/1C102/src/hw/spi/spi_top.v",
     "ModuleLine" : 3,

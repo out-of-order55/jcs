@@ -12,28 +12,28 @@
   <Part Number>: GW5AST-LV138FPG676AES
   <Device>: GW5AST-138B
   <Device Version>: B
-  <Created Time>:Wed Apr 10 16:32:34 2024
+  <Created Time>:Thu Apr 11 11:36:11 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
-    Placement Phase 1: CPU time = 0h 0m 0.293s, Elapsed time = 0h 0m 0.293s
+    Placement Phase 0: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
+    Placement Phase 1: CPU time = 0h 0m 0.389s, Elapsed time = 0h 0m 0.389s
     Placement Phase 2: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s
-    Placement Phase 3: CPU time = 0h 1m 22s, Elapsed time = 0h 1m 22s
-    Placement Phase GAO : CPU time = 0h 0m 0.569s, Elapsed time = 0h 0m 0.569s
-    Total Placement: CPU time = 0h 1m 32s, Elapsed time = 0h 1m 32s
+    Placement Phase 3: CPU time = 0h 1m 27s, Elapsed time = 0h 1m 27s
+    Placement Phase GAO : CPU time = 0h 0m 0.579s, Elapsed time = 0h 0m 0.579s
+    Total Placement: CPU time = 0h 1m 38s, Elapsed time = 0h 1m 38s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0.763s, Elapsed time = 0h 0m 0.763s
     Routing Phase 1: CPU time = 0h 0m 19s, Elapsed time = 0h 0m 19s
     Routing Phase 2: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
-    Routing Phase 3: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s
-    Total Routing: CPU time = 0h 0m 29s, Elapsed time = 0h 0m 29s
+    Routing Phase 3: CPU time = 0h 0m 9s, Elapsed time = 0h 0m 9s
+    Total Routing: CPU time = 0h 0m 31s, Elapsed time = 0h 0m 31s
  Generate output files:
     CPU time = 0h 0m 15s, Elapsed time = 0h 0m 15s
 
- Total Time and Memory Usage: CPU time = 0h 2m 16s, Elapsed time = 0h 2m 16s, Peak memory usage = 1578MB
+ Total Time and Memory Usage: CPU time = 0h 2m 24s, Elapsed time = 0h 2m 24s, Peak memory usage = 1696MB
 
 
 3. Resource Usage Summary
@@ -41,20 +41,20 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 14368/138240  11%
-    --LUT,ALU,ROM16           | 14356(13654 LUT, 702 ALU, 0 ROM16)
+  Logic                       | 14491/138240  11%
+    --LUT,ALU,ROM16           | 14479(13777 LUT, 702 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 2
-  Register                    | 3559/139140  3%
-    --Logic Register as Latch | 36/138240  <1%
-    --Logic Register as FF    | 3523/138240  3%
+  Register                    | 3720/139140  3%
+    --Logic Register as Latch | 68/138240  <1%
+    --Logic Register as FF    | 3652/138240  3%
     --I/O Register as Latch   | 0/900  0%
     --I/O Register as FF      | 0/900  0%
-  CLS                         | 8982/69120  13%
-  I/O Port                    | 10
-  I/O Buf                     | 9
+  CLS                         | 9078/69120  14%
+  I/O Port                    | 15
+  I/O Buf                     | 14
     --Input Buf               | 6
     --Output Buf              | 3
-    --Inout Buf               | 0
+    --Inout Buf               | 5
   IOLOGIC                     | 0%
   BSRAM                       | 20%
     --SP                      | 68
@@ -95,8 +95,8 @@
   I/O Bank  | Usage       
   -----------------------
   bank 2   | 5/50(10%)   
-  bank 3   | 4/50(8%)    
-  bank 4   | 0/50(0%)    
+  bank 3   | 8/50(16%)   
+  bank 4   | 1/50(2%)    
   bank 5   | 0/50(0%)    
   bank 6   | 0/50(0%)    
   bank 7   | 1/50(2%)    
@@ -110,8 +110,8 @@
   Global Clock  | Usage       
   -------------------------------
   PRIMARY       | 5/8(63%)
-  LW            | 2/8(25%)
-  GCLK_PIN      | 1/24(5%)
+  LW            | 3/8(38%)
+  GCLK_PIN      | 2/24(9%)
   PLL           | 1/12(9%)
   CLKDIV        | 0/24(0%)
   DLLDLY        | 0/12(0%)
@@ -124,12 +124,13 @@
   Signal         | Global Clock   | Location
   -------------------------------------------
   CLK50M_d       | PRIMARY        |  PTR1 PBR3
-  LJTAG_TCK_1    | PRIMARY        |  PBR2 PBR3
+  LJTAG_TCK_1    | PRIMARY        |  PBR2
   clk_ext8m      | PRIMARY        |  PTR0 PTR1 PTR2 PBR0 PBR1 PBR2
-  A_pwm/n101_6   | PRIMARY        |  PTR1
-  A_timer/re     | PRIMARY        |  PTR0
+  A_gpio/n4_6    | PRIMARY        |  PTR1
+  A_pwm/n101_5   | PRIMARY        |  PTR1
   A_cpu/inst_sram_en| LW             |  -
   A_cpu/inst_sram_wr| LW             |  -
+  A_timer/re     | LW             |  -
   ===========================================
 
 
@@ -142,12 +143,17 @@ CLK50M      |           | P16/3         | Y          | in    | IOR103[B] | LVCMO
 rst         |           | U4/7          | Y          | in    | IOL1[A]  | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 LJTAG_TRST  |           | P21/3         | Y          | in    | IOR78[B] | LVCMOS33   | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 uart1_rx_i  |           | V16/2         | Y          | in    | IOR2[A]  | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
-led0        |           | R26/3         | Y          | out   | IOR65[A] | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
+testled     |           | N23/3         | Y          | out   | IOR76[A] | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 uart1_tx_o  |           | U16/2         | Y          | out   | IOR6[B]  | LVCMOS33   | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 LJTAG_TMS   |           | W21/2         | Y          | io    | IOR24[A] | LVCMOS33   | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 LJTAG_TDO   |           | U14/2         | Y          | io    | IOR11[A] | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 LJTAG_TDI   |           | P23/3         | Y          | io    | IOR74[A] | LVCMOS33   | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 LJTAG_TCK   |           | Y21/2         | Y          | io    | IOR24[B] | LVCMOS33   | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
+GPIO01      |           | J14/4         | Y          | io    | IOB97[A] | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
+GPIO13      |           | R26/3         | Y          | io    | IOR65[A] | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
+GPIO18      |           | L20/3         | Y          | io    | IOR92[B] | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
+GPIO19      |           | M25/3         | Y          | io    | IOR87[B] | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
+GPIO20      |           | N21/3         | Y          | io    | IOR80[A] | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 ===================================================================================================================================================================================================================
 
 
@@ -214,7 +220,7 @@ M14/4    | -           | in    | IOB93[A] | LVCMOS33 | 8     | UP        | OFF  
 L14/4    | -           | in    | IOB93[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 M15/4    | -           | in    | IOB95[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 L15/4    | -           | in    | IOB95[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
-J14/4    | -           | in    | IOB97[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
+J14/4    | GPIO01      | io    | IOB97[A] | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 J15/4    | -           | in    | IOB97[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 K15/4    | -           | in    | IOB99[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 J16/4    | -           | in    | IOB99[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
@@ -431,7 +437,7 @@ R25/3    | -           | in    | IOR60[A] | LVCMOS33 | 8     | NONE      | OFF  
 P25/3    | -           | in    | IOR60[B] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 T23/3    | -           | in    | IOR62[A] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 R23/3    | -           | in    | IOR62[B] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
-R26/3    | led0        | out   | IOR65[A] | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
+R26/3    | GPIO13      | io    | IOR65[A] | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 P26/3    | -           | in    | IOR65[B] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 N26/3    | -           | in    | IOR67[A] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 M26/3    | -           | in    | IOR67[B] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
@@ -442,22 +448,22 @@ N19/3    | -           | in    | IOR71[B] | LVCMOS33 | 8     | NONE      | OFF  
 R18/3    | -           | in    | IOR73[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 P23/3    | LJTAG_TDI   | in    | IOR74[A] | LVCMOS33 | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 P24/3    | -           | in    | IOR74[B] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
-N23/3    | -           | in    | IOR76[A] | LVCMOS33 | 8     | DOWN      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
+N23/3    | testled     | out   | IOR76[A] | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 N24/3    | -           | in    | IOR76[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 P20/3    | -           | in    | IOR78[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 P21/3    | LJTAG_TRST  | in    | IOR78[B] | LVCMOS33 | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
-N21/3    | -           | in    | IOR80[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
+N21/3    | GPIO20      | io    | IOR80[A] | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 N22/3    | -           | in    | IOR80[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 M21/3    | -           | in    | IOR83[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 M22/3    | -           | in    | IOR83[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 L22/3    | -           | in    | IOR85[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 L23/3    | -           | in    | IOR85[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 M24/3    | -           | in    | IOR87[A] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
-M25/3    | -           | in    | IOR87[B] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
+M25/3    | GPIO19      | io    | IOR87[B] | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 L24/3    | -           | in    | IOR89[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 L25/3    | -           | in    | IOR89[B] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 M20/3    | -           | in    | IOR92[A] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
-L20/3    | -           | in    | IOR92[B] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
+L20/3    | GPIO18      | io    | IOR92[B] | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 K25/3    | -           | in    | IOR94[A] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 K26/3    | -           | in    | IOR94[B] | LVCMOS33 | 8     | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 P18/3    | -           | in    | IOR96[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       

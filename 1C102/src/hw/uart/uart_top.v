@@ -69,7 +69,7 @@ module UART_TOP (
 	
 	assign apb_prdata = (last_paddr[7:0] == 8'h00) ? {24'h0000_00, uart_rdata}:
 					(last_paddr[7:0] == 8'h04) ? {24'h0000_00, status}:
-												 {32'h0000_00};
+												{32'h0000_00};
 
 	assign status = {6'b000000, tx_full, rx_empty};
 	

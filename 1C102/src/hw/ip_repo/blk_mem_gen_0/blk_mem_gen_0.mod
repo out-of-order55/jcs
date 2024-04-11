@@ -16,4 +16,4 @@
 -write_mode write-through
 -byteEnable 1
 -reset_mode sync
--init_file C:\Users\Legion\Desktop\01_sopc\1C102\src\sw\gpio_out_cut_in_right_delay_0116_1111.mi
+-init_file C:/Users/Legion/Desktop/01_sopc/1C102/src/sw/hpet_int.mi

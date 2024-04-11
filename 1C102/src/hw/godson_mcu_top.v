@@ -1,15 +1,19 @@
 module godson_mcu_top (
 	input         CLK50M,
 	input         rst, 
+    output        testled,
 	// output        pps_led,
 	
 	input  		  LJTAG_TRST,
 	inout  		  LJTAG_TMS, LJTAG_TDO, LJTAG_TDI, LJTAG_TCK,
 
-	output        led0,
 
     // //gpio
-    // inout          GPIO01,
+    inout          GPIO01,
+    inout          GPIO13,
+    inout          GPIO18,
+    inout          GPIO19,
+    inout          GPIO20,
 
     // //pwm
     // output        PWM01,
@@ -30,6 +34,7 @@ module godson_mcu_top (
 	// output  	  SPI_CSN2, 
 	// output  	  SPI_CSN3
     );
+    assign testled = timer_test;
     wire    RSTN=!rst;
 	parameter ADDR_APB = 32,
 			  DATA_APB_8 = 8,
@@ -37,7 +42,7 @@ module godson_mcu_top (
     parameter RESET_TIME = 40000000;// 5s
 
 	wire    clk_ext8m;
-    wire [5:0]  interrupt = 6'h00;
+    wire [5:0]  interrupt = {1'b0,int_o,4'b0};
 
 	reg [29 : 0] rst_cnt = 0;
 	always @(posedge CLK50M or negedge RSTN)
@@ -70,11 +75,11 @@ module godson_mcu_top (
 	wire           			  apb0_penable;
 	wire [DATA_APB_32-1:0]    apb0_pwdata;
 	wire [DATA_APB_32-1:0]    apb0_prdata;
-	wire           apb0_ack = apb0_penable;
+	wire           gpio_ack = gpio_penable;
 
 
     //gpio
-    wire         gpio_pse1;
+    wire         gpio_psel;
     wire  [31:0] gpio_paddr;
     wire         gpio_pwrite;
     wire         gpio_penable;
@@ -82,30 +87,33 @@ module godson_mcu_top (
     wire  [31:0] gpio_prdata;
 
     //pwm
-    wire         pwm_pse1;
+    wire         pwm_psel;
     wire  [31:0] pwm_paddr;
     wire         pwm_pwrite;
     wire         pwm_penable;
     wire  [31:0] pwm_pwdata;
     wire  [31:0] pwm_prdata;
+    wire         pwm_ack = pwm_penable;
 
     //hpet
-    wire         timer_pse1;
+    wire         timer_psel;
     wire  [31:0] timer_paddr;
     wire         timer_pwrite;
     wire         timer_penable;
     wire  [31:0] timer_pwdata;
     wire  [31:0] timer_prdata;
+    wire         timer_ack = timer_penable;
     //wire         timer_int;
 
     //confreg
-    wire         confreg_pse1;
+    wire         confreg_psel;
     wire  [19:0] confreg_paddr;
     wire         confreg_pwrite;
     wire         confreg_penable;
     wire  [7:0]  confreg_pwdata;
     wire  [7:0]  confreg_prdata;
     wire         confreg_int;
+    wire         confreg_ack = confreg_penable;
     wire         timer_int;
     wire         i2c_int;
     wire         uart1_int;
@@ -123,6 +131,7 @@ module godson_mcu_top (
     wire         uart1_penable;
     wire [31:0]  uart1_pwdata;
     wire [31:0]  uart1_prdata;
+    wire         uart1_ack=uart1_penable;
     //wire         uart1_rx_i;
     //wire         uart1_tx_0;
     //wire         uart1_int;
@@ -133,7 +142,8 @@ module godson_mcu_top (
     wire         i2c_pwrite;
     wire         i2c_penable;
     wire [7:0]   i2c_pwdata;
-    wire [7:0]   i2c_prdata;    
+    wire [7:0]   i2c_prdata;   
+    wire   i2c_ack = i2c_penable; 
 
     //spi
     wire         spi_psel;
@@ -141,7 +151,8 @@ module godson_mcu_top (
     wire         spi_pwrite;
     wire         spi_penable;
     wire [7:0]   spi_pwdata;
-    wire [7:0]   spi_prdata;  
+    wire [7:0]   spi_prdata; 
+    wire   spi_ack = spi_penable;  
 
 	godson_mcu_cpu A_cpu
 	(
@@ -154,61 +165,61 @@ module godson_mcu_top (
 		.ljtag_tdi_i      (LJTAG_TDI        ),
 		.ljtag_tck_i      (LJTAG_TCK        ),
 
-		.apb0_psel        (apb0_psel        ),
-		.apb0_paddr       (apb0_paddr       ),
-		.apb0_pwrite      (apb0_pwrite      ),
-		.apb0_penable     (apb0_penable     ),
-		.apb0_pwdata      (apb0_pwdata      ),
-		.apb0_prdata      (apb0_prdata      ),
-		.apb0_ack         (apb0_ack         ),
+		.apb0_psel        (gpio_psel        ),
+		.apb0_paddr       (gpio_paddr       ),
+		.apb0_pwrite      (gpio_pwrite      ),
+		.apb0_penable     (gpio_penable     ),
+		.apb0_pwdata      (gpio_pwdata      ),
+		.apb0_prdata      (gpio_prdata      ),
+		.apb0_ack         (gpio_ack         ),
 
-		.apb1_psel        (pwm_pse1         ),
+		.apb1_psel        (pwm_psel         ),
 		.apb1_paddr       (pwm_paddr        ),
 		.apb1_pwrite      (pwm_pwrite       ),
 		.apb1_penable     (pwm_penable      ),
 		.apb1_pwdata      (pwm_pwdata       ),
 		.apb1_prdata      (pwm_prdata       ),
-		.apb1_ack         (                 ),
+		.apb1_ack         (pwm_ack),
 
-		.apb2_psel        (timer_pse1        ),
+		.apb2_psel        (timer_psel        ),
 		.apb2_paddr       (timer_pwrite      ),
 		.apb2_pwrite      (timer_paddr       ),
 		.apb2_penable     (timer_penable     ),
 		.apb2_pwdata      (timer_pwdata      ),
 		.apb2_prdata      (timer_prdata      ),
-		.apb2_ack         (                  ),
+		.apb2_ack         (timer_ack),
 
-		.apb3_psel        (confreg_pse1        ),
+		.apb3_psel        (confreg_psel        ),
 		.apb3_paddr       (confreg_pwrite      ),
 		.apb3_pwrite      (confreg_paddr       ),
 		.apb3_penable     (confreg_penable     ),
 		.apb3_pwdata      (confreg_pwdata      ),
 		.apb3_prdata      (confreg_prdata      ),
-		.apb3_ack         (                     ),
+		.apb3_ack         (confreg_ack),
 
-		.apb4_psel        (uart1_pse1         ),
+		.apb4_psel        (uart1_psel         ),
 		.apb4_paddr       (uart1_pwrite       ),
 		.apb4_pwrite      (uart1_paddr        ),
 		.apb4_penable     (uart1_penable      ),
 		.apb4_pwdata      (uart1_pwdata       ),
 		.apb4_prdata      (uart1_prdata       ),
-		.apb4_ack         (apb0_ack         ),
+		.apb4_ack         (uart1_ack           ),
 
-		.apb5_psel        (i2c_pse1           ),
+		.apb5_psel        (i2c_psel           ),
 		.apb5_paddr       (i2c_pwrite         ),
 		.apb5_pwrite      (i2c_paddr            ),
 		.apb5_penable     (i2c_penable        ),
 		.apb5_pwdata      (i2c_pwdata         ),
 		.apb5_prdata      (i2c_prdata         ),
-		.apb5_ack         (         ),
+		.apb5_ack         (i2c_ack),
 
-		.apb6_psel        (spi_pse1           ),
+		.apb6_psel        (spi_psel           ),
 		.apb6_paddr       (spi_pwrite         ),
 		.apb6_pwrite      (spi_paddr            ),
 		.apb6_penable     (spi_penable        ),
 		.apb6_pwdata      (spi_pwdata         ),
 		.apb6_prdata      (spi_prdata         ),
-		.apb6_ack         (         ),
+		.apb6_ack         (spi_ack),
 
 		.apb7_psel        (),
 		.apb7_paddr       (),
@@ -225,10 +236,9 @@ module godson_mcu_top (
 		.apb8_pwdata      (),
 		.apb8_prdata      (),
 		.apb8_ack         (),
-		.interrupt        ()
+		.interrupt        (interrupt)
 	);
 
-	assign led0 = apb0_pwdata[0];
 
 
     // gpio (0xbfeb_xxxx） below
@@ -236,14 +246,18 @@ module godson_mcu_top (
     (
         .apb_pclk       (clk_ext8m   ),
         .apb_prstn      (RSTN        ),
-        .apb_psel       (gpio_pse1   ),
+        .apb_psel       (gpio_psel   ),
         .apb_paddr      (gpio_paddr  ),
         .apb_pwrite     (gpio_pwrite ),
         .apb_penable    (gpio_penable),
         .apb_pwdata     (gpio_pwdata ),
         .apb_prdata     (gpio_prdata ),
 
-        .GPIO01         (GPIO01)
+        .GPIO01         (GPIO01),
+        .GPIO13         (GPIO13),
+        .GPIO18         (GPIO18),
+        .GPIO19         (GPIO19),
+        .GPIO20         (GPIO20)
     );
     //gpio above
 
@@ -252,7 +266,7 @@ module godson_mcu_top (
     (
         .apb_pclk       (clk_ext8m   ),
         .apb_prstn      (RSTN        ),
-        .apb_psel       (pwm_pse1   ),
+        .apb_psel       (pwm_psel   ),
         .apb_paddr      (pwm_paddr  ),
         .apb_pwrite     (pwm_pwrite ),
         .apb_penable    (pwm_penable),
@@ -268,22 +282,31 @@ module godson_mcu_top (
     (
         .apb_pclk       (clk_ext8m        ),
         .apb_prstn      (RSTN             ),
-        .apb_psel       (timer_pse1       ),
+        .apb_psel       (timer_psel      ),
         .apb_pwrite     (timer_pwrite     ),
         .apb_paddr      (timer_paddr[3:0] ),
         .apb_penable    (timer_penable),
         .apb_pwdata     (timer_pwdata     ),
         .apb_prdata     (timer_prdata     ),
 
-        .int_o      (timer_int)
+        .int_o          (timer_int)
     );
 
+    reg     timer_test;
+    always @(posedge clk_ext8m) begin
+        if(!RSTN)begin
+            timer_test <= 'b1;
+        end
+        else if(timer_int)begin
+            timer_test <= 'b0;
+        end
+    end
     //confreg
     CONFREG confreg
     (
         .apb_pclk       (clk_ext8m          ),
         .apb_prstn      (RSTN               ),
-        .apb_psel       (confreg_pse1       ),
+        .apb_psel       (confreg_psel       ),
         .apb_pwrite     (confreg_pwrite     ),
         .apb_paddr      (confreg_paddr      ),
         .apb_penable    (confreg_penable    ),
@@ -305,7 +328,7 @@ module godson_mcu_top (
     (
         .apb_pclk       (clk_ext8m        ),
         .apb_prstn      (RSTN             ),
-        .apb_psel       (uart1_pse1       ),
+        .apb_psel       (uart1_psel       ),
         .apb_pwrite     (uart1_pwrite     ),
         .apb_paddr      (uart1_paddr      ),
         .apb_penable    (uart1_penable    ),
@@ -322,7 +345,7 @@ module godson_mcu_top (
     (
         .apb_pclk       (clk_ext8m          ),
         .apb_prstn      (RSTN               ),
-        .apb_psel       (i2c_pse1           ),
+        .apb_psel       (i2c_psel           ),
         .apb_pwrite     (i2c_pwrite         ),
         .apb_paddr      (i2c_paddr[2:0]     ),
         .apb_penable    (i2c_penable        ),
@@ -339,7 +362,7 @@ module godson_mcu_top (
     (
         .apb_pclk       (clk_ext8m          ),
         .apb_prstn      (RSTN               ),
-        .apb_psel       (spi_pse1           ),
+        .apb_psel       (spi_psel           ),
         .apb_pwrite     (spi_pwrite         ),
         .apb_paddr      (spi_paddr[3:0]     ),
         .apb_penable    (spi_penable        ),

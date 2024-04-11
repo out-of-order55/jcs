@@ -85,12 +85,12 @@ module apb_gpio (
 	assign apb_prdata = rdata;
 
 	GPIO_IOBUF pad_GPIO01 (.IO(GPIO01), .O(gpioa_i[1] ), .I(gpioa_o[1] ), .T(~gpioa_oe[1] ));
-/*
+
     GPIO_IOBUF pad_GPIO13 (.IO(GPIO13), .O(gpioa_i[13]), .I(gpioa_o[13]), .T(~gpioa_oe[13]));
 	GPIO_IOBUF pad_GPIO18 (.IO(GPIO18), .O(gpioa_i[18]), .I(gpioa_o[18]), .T(~gpioa_oe[18]));
 	GPIO_IOBUF pad_GPIO19 (.IO(GPIO19), .O(gpioa_i[19]), .I(gpioa_o[19]), .T(~gpioa_oe[19]));
 	GPIO_IOBUF pad_GPIO20 (.IO(GPIO20), .O(gpioa_i[20]), .I(gpioa_o[20]), .T(~gpioa_oe[20]));
-
+/*
 	GPIO_IOBUF pad_GPIO34 (.IO(GPIO34), .O(gpiob_i[2] ), .I(gpiob_o[2] ), .T(~gpiob_oe[2] ));
 	GPIO_IOBUF pad_GPIO35 (.IO(GPIO35), .O(gpiob_i[3] ), .I(gpiob_o[3] ), .T(~gpiob_oe[3] ));
 	GPIO_IOBUF pad_GPIO36 (.IO(GPIO36), .O(gpiob_i[4] ), .I(gpiob_o[4] ), .T(~gpiob_oe[4] ));

@@ -638,8 +638,8 @@ la132_top  A_la132
 		.apb7_addr        (apb7_paddr          ),
 		.apb7_datai       (apb7_pwdata         ),
 		.apb7_datao       (apb7_prdata         ),
+		
 		.apb8_req         (                    ),
-            
 		.apb8_ack         (apb8_ack            ),
 		.apb8_rw          (apb8_pwrite         ),
 		.apb8_psel        (apb8_psel           ),
